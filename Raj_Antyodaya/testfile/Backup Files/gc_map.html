@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3457032adcfb48d1927eadbc0bb793a9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_3457032adcfb48d1927eadbc0bb793a9" ></div>
+        
+</body>
+<script>    
+    
+            var map_3457032adcfb48d1927eadbc0bb793a9 = L.map(
+                "map_3457032adcfb48d1927eadbc0bb793a9",
+                {
+                    center: [28.049484884650834, 76.19726762541511],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8908a46c27f7445089c482f3971ef94f = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+        function geo_json_7477a83b71704f8084e5a987557d6485_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": null, "fillOpacity": 0};
+            }
+        }
+
+        function geo_json_7477a83b71704f8084e5a987557d6485_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7477a83b71704f8084e5a987557d6485 = L.geoJson(null, {
+                onEachFeature: geo_json_7477a83b71704f8084e5a987557d6485_onEachFeature,
+            
+                style: geo_json_7477a83b71704f8084e5a987557d6485_styler,
+        });
+
+        function geo_json_7477a83b71704f8084e5a987557d6485_add (data) {
+            geo_json_7477a83b71704f8084e5a987557d6485
+                .addData(data)
+                .addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        }
+            geo_json_7477a83b71704f8084e5a987557d6485_add({"features": [{"geometry": {"coordinates": [[[76.31109457775261, 28.17862088774382], [76.33276086012563, 28.169472561209773], [76.3455784862582, 28.169541230743278], [76.35785319436945, 28.161069929133987], [76.35681973124565, 28.143639931137955], [76.3676634974725, 28.135803471752865], [76.38279688237026, 28.132862605924572], [76.38470317351272, 28.13644135188696], [76.39578530954446, 28.136541172137413], [76.40119083398986, 28.144796990788564], [76.43291802544655, 28.140692511050588], [76.43795076741407, 28.148447033204093], [76.4589386506982, 28.146124136519745], [76.46632280415412, 28.15116955443142], [76.47406405231425, 28.149771904549823], [76.47261129287693, 28.13442729408439], [76.48156846761077, 28.128352424025195], [76.4918699579323, 28.129626362266833], [76.48765378059755, 28.119189653479793], [76.50169926820672, 28.11883383851091], [76.50000134458645, 28.100577620760646], [76.47855029066346, 28.100949119906034], [76.47606189803821, 28.10860873210737], [76.46389647644128, 28.10835034339368], [76.45734791007806, 28.10539817668456], [76.45270132170867, 28.09324785740273], [76.4419388452016, 28.093764764332434], [76.43929016460947, 28.08656863393537], [76.41851516704139, 28.072578656979488], [76.38645386125677, 28.07391682749966], [76.38775697350559, 28.06485421714848], [76.37699622369684, 28.035207919310096], [76.36472337808146, 28.03378483570168], [76.37275950494723, 28.01004494781614], [76.33892516236642, 28.005179686593294], [76.3422374868706, 27.998696468567232], [76.33916055811335, 27.99106870585615], [76.33274774261429, 27.992537135980115], [76.3235009403162, 27.98668905065921], [76.32487629060836, 27.972666715196794], [76.3375095782045, 27.966335201108677], [76.34286179983224, 27.957027886128117], [76.35311014651609, 27.953816696683248], [76.3502798901049, 27.933524179097617], [76.37573038025289, 27.92694290708954], [76.39715375843923, 27.927005648292095], [76.38612545132855, 27.89990137774646], [76.3964977425768, 27.88868122905552], [76.40342714394757, 27.869484230512853], [76.38783440963033, 27.852465154343463], [76.37044588566914, 27.86072970990824], [76.33579615117151, 27.85860992151072], [76.3332494015387, 27.85382753371374], [76.34465610469556, 27.853086535515274], [76.33105086490554, 27.847610152586526], [76.33044008943864, 27.84237770087026], [76.31758561808186, 27.807674936948843], [76.28563944890152, 27.8017897285132], [76.25611941857636, 27.820887340278603], [76.26290310639331, 27.832218906877074], [76.25112889168508, 27.8428727902471], [76.23865402955988, 27.8474486694206], [76.22548390425885, 27.833149416512413], [76.20997328523896, 27.839627306954696], [76.21290742593703, 27.84621127153298], [76.19448577699706, 27.85939099439895], [76.19564280517136, 27.87727773467975], [76.20144213914347, 27.878220697227448], [76.20258585465353, 27.892513317635576], [76.16915942206975, 27.903373208706682], [76.18693730031623, 27.96487843069508], [76.1644762798565, 27.973274117306744], [76.16777289230521, 27.98059004099764], [76.15812735849084, 27.987601843650225], [76.1601790313373, 27.99461693962013], [76.17816112223807, 28.02102779599602], [76.19694521684835, 28.015534893420636], [76.20435469881033, 28.028163484757044], [76.2154767413586, 28.027007498897035], [76.21707211618525, 28.036161505549103], [76.20338370979044, 28.038241407215196], [76.20200110646596, 28.029487808415695], [76.19762765479248, 28.03024209319807], [76.18035679363118, 28.04413299993803], [76.18070616585692, 28.054640336982004], [76.18970131626281, 28.054765544194538], [76.20175213275479, 28.058699868604094], [76.21959452027096, 28.049736180980005], [76.2383747837693, 28.050775242383565], [76.24540111946612, 28.06522230606464], [76.25859871905567, 28.067303484768047], [76.29341278397288, 28.048717168162852], [76.29299247502274, 28.025359046083167], [76.32026491339508, 28.015852501591723], [76.32371197163025, 28.02170206090142], [76.33098858325656, 28.019228972039457], [76.34327762746062, 28.029433958810216], [76.3576409534673, 28.070504237580565], [76.34480923765625, 28.069542242680427], [76.33349904704346, 28.076081804132002], [76.33262094719902, 28.084077408445694], [76.32442228046392, 28.090630861724946], [76.32084426385177, 28.08787549275985], [76.30226079719807, 28.097806383258046], [76.31126936728754, 28.108076198557796], [76.33835251275832, 28.10251046888311], [76.36098306261829, 28.123913864133556], [76.333763422544, 28.1336375571276], [76.33142059058787, 28.14238632207116], [76.32276574094624, 28.14783217571437], [76.31514772508751, 28.150549701207808], [76.31043699527117, 28.145668619111518], [76.29837154051427, 28.14912160118098], [76.3057648958333, 28.159229531317862], [76.28212096291219, 28.165749497441425], [76.28386468180969, 28.171638324748926], [76.29054301225028, 28.170727980611844], [76.29335121818423, 28.17950243918625], [76.30579871753685, 28.17578111470675], [76.31109457775261, 28.17862088774382]]], "type": "Polygon"}, "id": "29", "properties": {"AC Code": 62.0, "AC_NAME": "Behror", "AC_NO": 62, "Adult \u0026 Non-Formal Education (0-1)": 0.19, "Agriculture (0-7)": 1.5, "Animal Husbandry (0-6)": 1.99, "Assembly Constituency": "Behror", "Cultural Activities (0-1)": 0.61, "DT_CODE": 6, "District": "ALWAR", "Drinking Water (0-3)": 2.11, "Education (0-6)": 3.88, "Family Welfare (0-1)": 0.73, "Financial \u0026 Communication Infrastructure (0-9)": 5.77, "Fisheries (0-2)": 0.0, "Fuel \u0026 Fodder (0-1)": 0.23, "Health \u0026 Sanitation (0-11)": 4.69, "Khadi, Village \u0026 Cottage Industries (0-3)": 0.02, "Land Improvement \u0026 Minor Irrigation (0-9)": 3.89, "Libraries (0-1)": 0.1, "Maintenance of Community Assets (0-1)": 0.63, "Markets \u0026 Fairs (0-3)": 0.44, "Non-Conventional Energy (0-1)": 0.14, "PC_NAME": "ALWAR", "PC_NO": 8, "Poverty Alleviation Programme (0-6)": 0.62, "Public Distribution System (0-2)": 1.52, "Roads (0-8)": 5.11, "Rural Electrification (0-3)": 2.35, "Rural Housing (0-4)": 4.0, "ST_CODE": 8, "ST_NAME": "RAJASTHAN", "Small Scale Industries (0-1)": 0.24, "Social Forestry (0-1)": 0.02, "Social Forestry (0-1).1": 0.02, "Total Population": 52230.0, "Vocational Education (0-2)": 0.49, "Women \u0026 Child Development (0-7)": 3.37}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var circle_b17e7839b64848d7a3ee474cb7fa11a3 = L.circle(
+                [28.049484884650834, 76.19726762541511],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 172.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_b17e7839b64848d7a3ee474cb7fa11a3.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> AKLEEMPURA <br><b>Agriculture (0-7):</b> 0.24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f09e46e2d3c74942b43d3bee64f09924 = L.circle(
+                [28.07925931397837, 76.3953455140478],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_f09e46e2d3c74942b43d3bee64f09924.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> DABARWAS <br><b>Agriculture (0-7):</b> 0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0161f880b1b649f8a646f3f7206c4e65 = L.circle(
+                [27.919133765219435, 76.32399919595561],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_0161f880b1b649f8a646f3f7206c4e65.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> DAHMI <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_470e72d698eb42a3acb43fcaa6fd0c91 = L.circle(
+                [28.040133174045096, 76.22476618005444],
+                {"bubblingMouseEvents": true, "color": "#D4B9DA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D4B9DA", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1300.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_470e72d698eb42a3acb43fcaa6fd0c91.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> DOOMROLI <br><b>Agriculture (0-7):</b> 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1c1115cefa474a949e621801210d20b1 = L.circle(
+                [27.900902866852544, 76.25393322148503],
+                {"bubblingMouseEvents": true, "color": "#C994C7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C994C7", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_1c1115cefa474a949e621801210d20b1.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> HAMEEDPUR <br><b>Agriculture (0-7):</b> 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1b1e0cc20f7d4c58ad8201896b8122dd = L.circle(
+                [27.86963807721817, 76.31238146494748],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_1b1e0cc20f7d4c58ad8201896b8122dd.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> JAGUWAS <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d5f51e31d25442228ba506a3613a449b = L.circle(
+                [27.823158754799625, 76.27545280069734],
+                {"bubblingMouseEvents": true, "color": "#C994C7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C994C7", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 850.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_d5f51e31d25442228ba506a3613a449b.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> JAINPURWAS <br><b>Agriculture (0-7):</b> 2.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_75df4d4ed54c4123b331ae4fd82d05a3 = L.circle(
+                [27.90522900085153, 76.31948677053558],
+                {"bubblingMouseEvents": true, "color": "#E7298A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E7298A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 631.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_75df4d4ed54c4123b331ae4fd82d05a3.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> KANKAR DOPA <br><b>Agriculture (0-7):</b> 1.77
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a43e1d6354614b9ab50ffcbe2fa73a08 = L.circle(
+                [27.86507024291651, 76.39166343378425],
+                {"bubblingMouseEvents": true, "color": "#E7298A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E7298A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 550.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_a43e1d6354614b9ab50ffcbe2fa73a08.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> KARODA <br><b>Agriculture (0-7):</b> 1.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5396f8df714d48c58b1d8331362d30b6 = L.circle(
+                [28.134833781376813, 76.34477414456092],
+                {"bubblingMouseEvents": true, "color": "#C994C7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C994C7", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 850.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_5396f8df714d48c58b1d8331362d30b6.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> KATHOOWAS <br><b>Agriculture (0-7):</b> 2.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3818b50007b146149795904635de9ec0 = L.circle(
+                [27.99481938321989, 76.25819711899855],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_3818b50007b146149795904635de9ec0.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> KHOHAR <br><b>Agriculture (0-7):</b> 0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e496b97fe1de4dc09aa3019ba8d5d024 = L.circle(
+                [27.92987637127705, 76.22793296600977],
+                {"bubblingMouseEvents": true, "color": "#C994C7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C994C7", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_e496b97fe1de4dc09aa3019ba8d5d024.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> MAHARAJWAS <br><b>Agriculture (0-7):</b> 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_721f9ffeeb3741c3b99b656c5364feab = L.circle(
+                [27.92987637127705, 76.22793296600977],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_721f9ffeeb3741c3b99b656c5364feab.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> None <br><b>Agriculture (0-7):</b> 0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_603ad63f7039486ca3c1e5cf8691b9a4 = L.circle(
+                [28.15650151239283, 76.3144400586256],
+                {"bubblingMouseEvents": true, "color": "#E7298A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E7298A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 550.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_603ad63f7039486ca3c1e5cf8691b9a4.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> PARTAPUR <br><b>Agriculture (0-7):</b> 1.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4ba4c0deab274a6f8a992d142621d0eb = L.circle(
+                [27.929633289567448, 76.26243400327316],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_4ba4c0deab274a6f8a992d142621d0eb.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> RAMSINGHPURA <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fb07eadcb5934e22a09bae47ba8e236c = L.circle(
+                [27.933359323365917, 76.30850763748987],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 394.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_fb07eadcb5934e22a09bae47ba8e236c.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> RIWALI <br><b>Agriculture (0-7):</b> 0.98
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a4788f4db9bf42ea8bbed9c2c0507861 = L.circle(
+                [28.010298458435567, 76.35549104590046],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_a4788f4db9bf42ea8bbed9c2c0507861.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> RODWAL <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_48a0ac392f834453ad2d635b18e1a0b0 = L.circle(
+                [28.121379573065067, 76.47793290943102],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_48a0ac392f834453ad2d635b18e1a0b0.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> SANTO <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_70a3fd47af334e7d8b2e55f134e810c4 = L.circle(
+                [28.121379573065067, 76.47793290943102],
+                {"bubblingMouseEvents": true, "color": "#91003F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91003F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 250.0, "stroke": true, "weight": 0.6}
+            ).addTo(map_3457032adcfb48d1927eadbc0bb793a9);
+        
+    
+            circle_70a3fd47af334e7d8b2e55f134e810c4.bindTooltip(
+                `<div>
+                     <b>Gram Panchayat:</b> None <br><b>Agriculture (0-7):</b> 0.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
