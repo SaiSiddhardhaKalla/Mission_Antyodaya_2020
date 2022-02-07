@@ -28,7 +28,7 @@ m = folium.Map(location=[26.5844, 73.8496],zoom_start=6, tiles='cartodbpositron'
 
 # Reading state Data
 # df = pd.read_csv("Raj_dt_ma.csv")
-df = https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.csv
+df = pd.read_csv('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.csv')
 geoData = open('Raj_dt_ma.geojson', 'r')
 
 # Reading ac data
