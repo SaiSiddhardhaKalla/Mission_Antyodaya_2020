@@ -37,10 +37,12 @@ geoData = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mi
 geo_ac_data = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_AC_ma.geojson')
 districts = list(geo_ac_data['District'].unique())
 districts.insert(0, "All")
-ac_df = pd.read_csv('raj_ac_ma.csv')
+# ac_df = pd.read_csv('raj_ac_ma.csv')
+ac_df = pd.read_csv('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_AC_ma.csv')
 
 # Reading gc data
-geo_gc_data = gpd.read_file("Raj_GP_ma.geojson")
+# geo_gc_data = gpd.read_file("Raj_GP_ma.geojson")
+geo_gc_data = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_GP_ma.geojson')
 
 
 # Creating dropdowns
