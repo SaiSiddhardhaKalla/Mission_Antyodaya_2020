@@ -83,8 +83,8 @@ def calculate_opacity(df, category, i):
 if district == "All":
 
     choropleth = folium.Choropleth(
-#         geo_data=json.load(geoData),
-        geo_data=json.dump(geoData),
+        geo_data=json.load(geoData),
+#         geo_data=json.dump(geoData),
         name='choropleth',
         data=df,
         columns=['District Name', str(category)],
