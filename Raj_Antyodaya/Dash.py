@@ -85,7 +85,7 @@ if district == "All":
 
     choropleth = folium.Choropleth(
 #         geo_data=json.load(geoData),
-        geo_data=read_file(geoData),
+        geo_data=gpd.read_file(geoData),
         name='choropleth',
         data=df,
         columns=['District Name', str(category)],
