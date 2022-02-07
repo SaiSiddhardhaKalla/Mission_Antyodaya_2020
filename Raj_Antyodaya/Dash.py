@@ -33,7 +33,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_A
 geoData = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.geojson')
 
 # Reading ac data
-geo_ac_data = gpd.read_file("Raj_AC_ma.geojson")
+# geo_ac_data = gpd.read_file("Raj_AC_ma.geojson")
+geo_ac_data = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_AC_ma.geojson')
 districts = list(geo_ac_data['District'].unique())
 districts.insert(0, "All")
 ac_df = pd.read_csv('raj_ac_ma.csv')
