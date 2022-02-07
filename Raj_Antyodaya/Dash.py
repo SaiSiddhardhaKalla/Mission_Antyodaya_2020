@@ -28,24 +28,24 @@ st.header("Mission Antyodaya Rajasthan 2020")
 m = folium.Map(location=[26.5844, 73.8496],zoom_start=6, tiles='cartodbpositron')
 
 # Reading state Data
-# df = pd.read_csv("Raj_dt_ma.csv")
+# df = pd.read_csv("Raj_dt_ma.csv") # Works locally
 df = pd.read_csv('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.csv')
-# geoData = open('Raj_dt_ma.geojson', 'r')
-# geoData = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.geojson')
+# geoData = open('Raj_dt_ma.geojson', 'r') # Works locally
+## Following required for github
 url = 'https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_dt_ma.geojson'
 resp = requests.get(url)
 geoData = json.loads(resp.text)
 
 # Reading ac data
-# geo_ac_data = gpd.read_file("Raj_AC_ma.geojson")
+# geo_ac_data = gpd.read_file("Raj_AC_ma.geojson") # Works locally
 geo_ac_data = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_AC_ma.geojson')
 districts = list(geo_ac_data['District'].unique())
 districts.insert(0, "All")
-# ac_df = pd.read_csv('raj_ac_ma.csv')
+# ac_df = pd.read_csv('raj_ac_ma.csv') # Works locally
 ac_df = pd.read_csv('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_AC_ma.csv')
 
 # Reading gc data
-# geo_gc_data = gpd.read_file("Raj_GP_ma.geojson")
+# geo_gc_data = gpd.read_file("Raj_GP_ma.geojson") # Works locally
 geo_gc_data = gpd.read_file('https://raw.githubusercontent.com/SaiSiddhardhaKalla/Mission_Antyodaya_2020/main/Raj_Antyodaya/Raj_GP_ma.geojson')
 
 
@@ -87,7 +87,7 @@ def calculate_opacity(df, category, i):
 if district == "All":
 
     choropleth = folium.Choropleth(
-#         geo_data=json.load(geoData),
+#         geo_data=json.load(geoData), # Works locally
         geo_data=json.dumps(geoData),
         name='choropleth',
         data=df,
